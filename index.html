@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pig - Dice Game</title>
+  <!-- css -->
+  <link rel="stylesheet" href="./styles.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="./fontawesome-icons/css/all.min.css">
+</head>
+
+<body>
+  <h1 class="game-title">pig - dice game</h1>
+  <div class="game-info">
+
+    <p>Each turn, a player repeatedly rolls the dice until either a 1 is rolled on any of the die or the player decides to
+    "hold":</p>
+    
+    <p><ul>
+    <li> If the player rolls a 1, their CURRENT score gets lost and it becomes the next player's turn.
+    <li> If the player rolls any other number, the sum of both the dice is added to their CURRENT score and the player's turn
+    continues.
+    <li> If a player chooses to "hold", their CURRENT score is added to their TOTAL score, and it becomes the next player's
+    turn.
+    </ul></p>
+
+    <p>The first player to score 100 or more points on TOTAL score wins</p>
+    
+  </div>
+
+  <!-- hero -->
+  <header class="hero">
+
+    <!-- for player-0 -->
+    <div class="player-block player-block-0 active">
+      <div class="player-name" id="player-name-0">player 1</div> 
+      <div class="player-score" id="player-score-0">55</div>
+      <div class="current-score-box">
+        <div class="current-score-label">current</div>
+        <div class="player-current-score" id="player-current-score-0">7</div>
+      </div>
+    </div>
+
+
+    <!-- for player-1 -->
+    <div class="player-block player-block-1">
+      <div class="player-name" id="player-name-1">player 2</div>
+      <div class="player-score" id="player-score-1">18</div>
+      <div class="current-score-box">
+        <div class="current-score-label">current</div>
+        <div class="player-current-score" id="player-current-score-1">0</div>
+      </div>
+    </div>
+
+    <!-- buttons -->
+    <button class="btn btn-new"><i class="fas fa-plus-circle"></i>New game</button>
+    <button class="btn btn-roll"><i class="fas fa-sync"></i>Roll dice</button>
+    <button class="btn btn-hold"><i class="fas fa-download"></i>Hold</button>
+
+
+    <!-- dice -->
+    <img src="dice-5.png" alt="Dice" class="dice" id="dice1">
+    <img src="dice-5.png" alt="Dice" class="dice" id="dice2">
+
+    <form>
+      <input type="text" name="Winning Score" placeholder="Set Winning Score" class="form-control" id="form-control">
+    </form>
+
+  </header>
+
+  <!-- javascript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

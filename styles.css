@@ -1,0 +1,245 @@
+/* font-family: 'Josefin Sans', sans-serif; */
+
+/* 
+===================
+CSS VARIABLES
+===================
+*/
+:root{
+  --clr-dark:#0C090D;
+  --clr-light:#ffffff;
+  --clr-highlight:#f3efef;
+  --clr-primary:#eb644d;
+  --clr-grey:#575757;
+}
+
+
+/* global classes */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./bcg.jpg) center/cover fixed no-repeat;
+  min-height: 100vh;
+  position: relative;
+  color: var(--clr-grey);
+}
+
+.game-title{
+  text-transform: uppercase;
+  color: var(--clr-light);
+  text-shadow: 5px 5px 5px var(--clr-primary);
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem 0 0;
+  font-size: 4rem;
+}
+.game-info{
+  max-width: 45rem;
+  margin: 2rem auto;
+}
+.game-info p,ul{
+  color: #FBFFFE;
+  line-height: 1.5;
+}
+.hero{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 1000px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.hero:hover{
+  box-shadow: 10px 10px 10px var(--clr-dark);
+}
+.player-block{
+  background: var(--clr-light);
+  height: 600px;
+  padding: 100px;
+}
+.player-name{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin: 1.5rem 0 1rem;
+  position: relative;
+}
+.player-score{
+  text-align: center;
+  font-size: 5rem;
+  color: var(--clr-primary);
+  margin-bottom: 8rem;
+  font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.current-score-box{
+  text-align: center;
+  background: var(--clr-primary);
+  color: var(--clr-light);
+  width: 40%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 50%;
+  
+}
+.current-score-label{
+  text-transform: uppercase;
+  color: var(--clr-dark);
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.player-current-score{
+  font-size: 1.2rem;
+}
+
+/* buttons */
+.btn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--clr-dark);
+  font-weight: bold;
+}
+
+.btn:hover{
+  color: var(--clr-primary); 
+}
+.btn:hover i{
+  margin-right: 1rem; 
+}
+.btn:focus{
+  outline: none;
+}
+
+i{
+  color: var(--clr-primary);
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+
+.btn-new{
+  top: 45px;
+}
+.btn-roll{
+  top: 403px;
+}
+.btn-hold{
+  top: 467px;
+}
+
+/* dice */
+.dice{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 10px var(--clr-dark);
+}
+#dice1{
+  top: 120px;
+}
+#dice2{
+  top: 240px;
+}
+/* form input */
+.form-control{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 530px;
+  outline: none;
+  border: 2px solid var(--clr-primary);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* winner class */
+.winner{
+background: var(--clr-highlight);
+}
+.winner .player-name{
+color: var(--clr-primary);
+font-weight: bold;
+font-size: 3rem;
+}
+.winner .player-score{
+color: var(--clr-dark);
+font-size: 4rem;
+}
+
+
+/* active class */
+.active {
+  background:var(--clr-highlight)
+}
+.active .player-name { 
+  color: var(--clr-dark);
+}
+
+.active .player-name::after {
+  content: "\2022";
+  font-size: 3.5rem;
+  position: absolute;
+  color: var(--clr-primary);
+  top: -12px;
+  right: 10px;
+  
+}
+
+
+
+
+
+
+
+/* @media screen and (max-width:481px) {
+.body{
+position:unset;
+}
+.game-title{
+font-size:2.5rem;
+}
+.game-info{
+max-width:22rem;
+}
+.game-info p,ul{
+line-height:1.2;
+}
+.hero{
+grid-template-columns:1fr;
+row gap:4rem;
+}
+.player-block{
+height:30rem;
+padding:2rem;
+}
+.player-name{
+font-size:1.5rem;
+}
+.player-score{
+font-size:3.5rem;
+margin-bottom:5rem;
+}
+
+} */
+
+
