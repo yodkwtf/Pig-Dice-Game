@@ -15,63 +15,116 @@
 </head>
 
 <body>
-  <h1 class="game-title">pig - dice game</h1>
-  <div class="game-info">
+  
+  <!-- header -->
+  <header class="hero" id="hero">
 
-    <p>Each turn, a player repeatedly rolls the dice until either a 1 is rolled on any of the die or the player decides to
-    "hold":</p>
     
-    <p><ul>
-    <li> If the player rolls a 1, their CURRENT score gets lost and it becomes the next player's turn.
-    <li> If the player rolls any other number, the sum of both the dice is added to their CURRENT score and the player's turn
-    continues.
-    <li> If a player chooses to "hold", their CURRENT score is added to their TOTAL score, and it becomes the next player's
-    turn.
-    </ul></p>
+    <!-- game banner -->
+    <div class="hero-banner">
+      
+      <!-- game title -->
+      <h1 class="game-title">PIG - The Dice Game</h1>
 
-    <p>The first player to score 100 or more points on TOTAL score wins</p>
-    
-  </div>
+      <!-- game rules -->
+      <div class="game-rules">
 
-  <!-- hero -->
-  <header class="hero">
+        <h3>Game rules -</h3>
+        <p>Each turn, a player repeatedly rolls the dice until either a 1 is rolled on any of the die or the player decides to
+        "hold":</p>
 
-    <!-- for player-0 -->
-    <div class="player-block player-block-0 active">
-      <div class="player-name" id="player-name-0">player 1</div> 
-      <div class="player-score" id="player-score-0">55</div>
-      <div class="current-score-box">
-        <div class="current-score-label">current</div>
-        <div class="player-current-score" id="player-current-score-0">7</div>
+        <ul>
+          <li>If the player rolls a 1, their CURRENT score gets lost and it becomes the next player's turn.</li>
+          <li>If the player rolls any other number, the sum of both the dice is added to their CURRENT score and the player's turn
+          continues.</li>
+          <li>If a player chooses to "hold", their CURRENT score is added to their TOTAL score, and it becomes the next player's
+          turn.</li>
+        </ul>
+
+        <p>The first player to score 100 or more points on TOTAL score wins</p>
+
       </div>
+
+      <!-- play game btn -->
+      <a href="#game" class="btn hero-btn">play now <i class="fas fa-dice"></i></a>
+
     </div>
-
-
-    <!-- for player-1 -->
-    <div class="player-block player-block-1">
-      <div class="player-name" id="player-name-1">player 2</div>
-      <div class="player-score" id="player-score-1">18</div>
-      <div class="current-score-box">
-        <div class="current-score-label">current</div>
-        <div class="player-current-score" id="player-current-score-1">0</div>
-      </div>
-    </div>
-
-    <!-- buttons -->
-    <button class="btn btn-new"><i class="fas fa-plus-circle"></i>New game</button>
-    <button class="btn btn-roll"><i class="fas fa-sync"></i>Roll dice</button>
-    <button class="btn btn-hold"><i class="fas fa-download"></i>Hold</button>
-
-
-    <!-- dice -->
-    <img src="dice-5.png" alt="Dice" class="dice" id="dice1">
-    <img src="dice-5.png" alt="Dice" class="dice" id="dice2">
-
-    <form>
-      <input type="text" name="Winning Score" placeholder="Set Winning Score" class="form-control" id="form-control">
-    </form>
-
   </header>
+  <!-- end of header -->
+
+
+
+  <!-- game section -->
+  <section class="game section" id="game">
+
+    <!-- section title -->
+    <h1 class="game-title">Let's Play!</h1>
+
+    <div class="section-center game-center">
+
+
+      <!-- new game cell -->
+      
+        <button class="btn btn-new"><i class="fas fa-plus-circle"></i>New game</button>
+
+      <!-- player-0 cell -->
+      <div class="player-0-cell">
+
+        <div class="player-block player-block-0 active">
+          <h3 class="player-name" id="player-name-0">player 1</h3>
+          <div class="grid-set">
+            <h1 class="player-score" id="player-score-0">55</h1>
+            <div class="current-score-box">
+              <h4 class="current-score-label">current</h4>
+              <h3 class="player-current-score" id="player-current-score-0">7</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- player-1 cell -->
+      <div class="player-1-cell">
+      
+        <div class="player-block player-block-1">
+          <h3 class="player-name" id="player-name-1">player 2</h3>
+          <div class="grid-set">
+            <h1 class="player-score" id="player-score-1">18</h1>
+            <div class="current-score-box">
+              <h4 class="current-score-label">current</h4>
+              <h3 class="player-current-score" id="player-current-score-1">0</h3>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- dice-roll cell -->
+      <div class="dice-roll-cell">
+      
+        <div class="dice-container">
+          <img src="dice-5.png" alt="Dice" class="dice" id="dice1">
+          <img src="dice-5.png" alt="Dice" class="dice" id="dice2">
+        </div>
+
+        <div class="btn-container">
+          <button class="btn btn-roll"><i class="fas fa-sync"></i>Roll dice</button>
+          <button class="btn btn-hold"><i class="fas fa-download"></i>Hold</button>
+        </div>
+
+      </div>
+
+      <!-- winning-score cell -->
+      
+          <input type="text" name="Winning Score" placeholder="Set Winning Score Here!" class="form-control" id="form-control">
+
+
+    </div>
+
+  </section>
+  <!-- end of game section -->
+
+
 
   <!-- javascript -->
   <script src="script.js"></script>

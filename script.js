@@ -71,7 +71,8 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
     if (scores[activePlayer] >= winningScore) {
 
       // change player name to winner
-      document.querySelector('#player-name-' + activePlayer).textContent = 'WINNER!';
+      document.querySelector('#player-name-' + activePlayer).innerHTML = '<h1>WINNER!</h1>';
+      document.querySelector('#player-score-' + activePlayer).innerHTML = '<h2>' + scores[activePlayer] + '</h2>';
 
       // hide the dice
       hideDice();
@@ -176,3 +177,5 @@ function hideDice() {
   document.getElementById('dice1').style.display = 'none';
   document.getElementById('dice2').style.display = 'none';
 }
+
+
