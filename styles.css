@@ -375,6 +375,15 @@ button i{
 .grid-set{
   padding-top: 0;
 }
+.game-title{
+  margin-bottom: 2rem;
+}
+.game-rules{
+  margin: 1rem auto;
+}
+.margin-top{
+  margin-top: 1rem ;
+}
 }
 /* ******************************************************** */
 
