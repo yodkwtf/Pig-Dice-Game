@@ -71,8 +71,8 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
     if (scores[activePlayer] >= winningScore) {
 
       // change player name to winner
-      document.querySelector('#player-name-' + activePlayer).innerHTML = '<h1>WINNER!</h1>';
-      document.querySelector('#player-score-' + activePlayer).innerHTML = '<h2>' + scores[activePlayer] + '</h2>';
+      document.querySelector('#player-name-' + activePlayer).innerHTML = '<h3>WINNER!</h3>';
+      document.querySelector('#player-score-' + activePlayer).innerHTML = '<h1>' + scores[activePlayer] + '</h1>';
 
       // hide the dice
       hideDice();
@@ -140,7 +140,11 @@ function newGame() {
   // remove the winner class
   document.querySelector('.player-block-0').classList.remove('winner');
   document.querySelector('.player-block-1').classList.remove('winner');
-  
+	
+	// removing the active class
+	document.querySelector('.player-block-0').classList.remove('active');
+	document.querySelector('.player-block-1').classList.remove('active');
+
   // adding the active class
   document.querySelector('.player-block-0').classList.add('active');
 

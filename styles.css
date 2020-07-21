@@ -195,7 +195,7 @@ GAME
   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./game-bcg.jpg) center/cover  no-repeat;
 }
 .game .game-title{
-  margin-top: 4rem;
+  margin-top: 0;
 }
 
 .player-block{
@@ -254,15 +254,15 @@ button i{
 
 .form-control{
   outline: none;
-  border: 2px solid var(--clr-dark);
+  border: 2px solid var(--clr-light);
   padding: 0.6rem 0.9rem;
   font-size: 1rem;
   text-align: center;
-  background: linear-gradient(rgba(12, 9, 13, 0.8),rgba(12, 9, 13, 0.8));
-  color: var(--clr-light);
+	background: linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.9));
+  color: var(--clr-grey);
 }
 .form-control::placeholder{
-  color: var(--clr-light);
+  color: var(--clr-grey);
 }
 
 /* ******************************************************** */
@@ -375,6 +375,9 @@ button i{
 .grid-set{
   padding-top: 0;
 }
+.game .game-title{
+  margin-top: -4.5rem;
+}
 .game-title{
   margin-bottom: 2rem;
 }
@@ -414,11 +417,11 @@ background: var(--clr-highlight);
 .winner .player-name{
 color: var(--clr-primary);
 font-weight: bold;
-font-size: 3rem;
+/* font-size: 3rem; */
 }
 .winner .player-score{
 color: var(--clr-dark);
-font-size: 4rem;
+/* font-size: 4rem; */
 }
 
 
