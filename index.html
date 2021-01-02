@@ -1,133 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pig - Dice Game</title>
-  <!-- css -->
-  <link rel="stylesheet" href="./styles.css">
-  <!-- favicon -->
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="./fontawesome-icons/css/all.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig - Dice Game</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-  
-  <!-- header -->
-  <header class="hero" id="hero">
+  <body>
+    <!-- header -->
+    <header class="hero" id="hero">
+      <!-- game banner -->
+      <div class="hero-banner">
+        <!-- game title -->
+        <h1 class="game-title">PIG - The Dice Game</h1>
 
-    
-    <!-- game banner -->
-    <div class="hero-banner">
-      
-      <!-- game title -->
-      <h1 class="game-title">PIG - The Dice Game</h1>
+        <!-- game rules -->
+        <div class="game-rules">
+          <h3>Game rules -</h3>
+          <p>
+            Each turn, a player repeatedly rolls the dice until either a 1 is
+            rolled on any of the die or the player decides to "hold":
+          </p>
 
-      <!-- game rules -->
-      <div class="game-rules">
+          <ul>
+            <li>
+              If the player rolls a 1, their CURRENT score gets lost and it
+              becomes the next player's turn.
+            </li>
+            <li>
+              If the player rolls any other number, the sum of both the dice is
+              added to their CURRENT score and the player's turn continues.
+            </li>
+            <li>
+              If a player chooses to "hold", their CURRENT score is added to
+              their TOTAL score, and it becomes the next player's turn.
+            </li>
+          </ul>
 
-        <h3>Game rules -</h3>
-        <p>Each turn, a player repeatedly rolls the dice until either a 1 is rolled on any of the die or the player decides to
-        "hold":</p>
+          <p>
+            The first player to score 100 or more points on TOTAL score wins
+          </p>
+        </div>
 
-        <ul>
-          <li>If the player rolls a 1, their CURRENT score gets lost and it becomes the next player's turn.</li>
-          <li>If the player rolls any other number, the sum of both the dice is added to their CURRENT score and the player's turn
-          continues.</li>
-          <li>If a player chooses to "hold", their CURRENT score is added to their TOTAL score, and it becomes the next player's
-          turn.</li>
-        </ul>
-
-        <p>The first player to score 100 or more points on TOTAL score wins</p>
-
+        <!-- play game btn -->
+        <a href="#game" class="btn hero-btn"
+          >play now <i class="fas fa-dice"></i
+        ></a>
       </div>
+    </header>
+    <!-- end of header -->
 
-      <!-- play game btn -->
-      <a href="#game" class="btn hero-btn">play now <i class="fas fa-dice"></i></a>
+    <!-- game section -->
+    <section class="game section" id="game">
+      <!-- section title -->
+      <h1 class="game-title">Let's Play!</h1>
 
-    </div>
-  </header>
-  <!-- end of header -->
+      <div class="section-center game-center">
+        <!-- new game cell -->
 
+        <button class="btn btn-new">
+          <i class="fas fa-plus-circle"></i>New game
+        </button>
 
-
-  <!-- game section -->
-  <section class="game section" id="game">
-
-    <!-- section title -->
-    <h1 class="game-title">Let's Play!</h1>
-
-    <div class="section-center game-center">
-
-
-      <!-- new game cell -->
-      
-        <button class="btn btn-new"><i class="fas fa-plus-circle"></i>New game</button>
-
-      <!-- player-0 cell -->
-      <div class="player-0-cell">
-
-        <div class="player-block player-block-0 active">
-          <h3 class="player-name" id="player-name-0">player 1</h3>
-          <div class="grid-set">
-            <h1 class="player-score" id="player-score-0">55</h1>
-            <div class="current-score-box">
-              <h4 class="current-score-label">current</h4>
-              <h3 class="player-current-score" id="player-current-score-0">7</h3>
+        <!-- player-0 cell -->
+        <div class="player-0-cell">
+          <div class="player-block player-block-0 active">
+            <h3 class="player-name" id="player-name-0">player 1</h3>
+            <div class="grid-set">
+              <h1 class="player-score" id="player-score-0">55</h1>
+              <div class="current-score-box">
+                <h4 class="current-score-label">current</h4>
+                <h3 class="player-current-score" id="player-current-score-0">
+                  7
+                </h3>
+              </div>
             </div>
           </div>
         </div>
 
-      </div>
-
-      <!-- player-1 cell -->
-      <div class="player-1-cell">
-      
-        <div class="player-block player-block-1">
-          <h3 class="player-name" id="player-name-1">player 2</h3>
-          <div class="grid-set">
-            <h1 class="player-score" id="player-score-1">18</h1>
-            <div class="current-score-box">
-              <h4 class="current-score-label">current</h4>
-              <h3 class="player-current-score" id="player-current-score-1">0</h3>
+        <!-- player-1 cell -->
+        <div class="player-1-cell">
+          <div class="player-block player-block-1">
+            <h3 class="player-name" id="player-name-1">player 2</h3>
+            <div class="grid-set">
+              <h1 class="player-score" id="player-score-1">18</h1>
+              <div class="current-score-box">
+                <h4 class="current-score-label">current</h4>
+                <h3 class="player-current-score" id="player-current-score-1">
+                  0
+                </h3>
+              </div>
             </div>
           </div>
         </div>
-      
-      </div>
 
-      <!-- dice-roll cell -->
-      <div class="dice-roll-cell">
-      
-        <div class="dice-container">
-          <img src="dice-5.png" alt="Dice" class="dice" id="dice1">
-          <img src="dice-5.png" alt="Dice" class="dice" id="dice2">
+        <!-- dice-roll cell -->
+        <div class="dice-roll-cell">
+          <div class="dice-container">
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice1" />
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice2" />
+          </div>
+
+          <div class="btn-container">
+            <button class="btn btn-roll">
+              <i class="fas fa-sync"></i>Roll dice
+            </button>
+            <button class="btn btn-hold">
+              <i class="fas fa-download"></i>Hold
+            </button>
+          </div>
         </div>
 
-        <div class="btn-container">
-          <button class="btn btn-roll"><i class="fas fa-sync"></i>Roll dice</button>
-          <button class="btn btn-hold"><i class="fas fa-download"></i>Hold</button>
-        </div>
+        <!-- winning-score cell -->
 
+        <input
+          type="text"
+          name="Winning Score"
+          placeholder="Set Winning Score!"
+          class="form-control"
+          id="form-control"
+        />
       </div>
+    </section>
+    <!-- end of game section -->
 
-      <!-- winning-score cell -->
-      
-          <input type="text" name="Winning Score" placeholder="Set Winning Score!" class="form-control" id="form-control">
-
-
-    </div>
-
-  </section>
-  <!-- end of game section -->
-
-
-
-  <!-- javascript -->
-  <script src="script.js"></script>
-</body>
-
+    <!-- javascript -->
+    <script src="script.js"></script>
+  </body>
 </html>
