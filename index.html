@@ -53,6 +53,7 @@
             </li>
           </ul>
 
+          <br />
           <p>
             The first player to score 100 or more points on TOTAL score wins
           </p>
@@ -71,12 +72,21 @@
       <!-- section title -->
       <h1 class="game-title">Let's Play!</h1>
 
-      <div class="section-center game-center">
-        <!-- new game cell -->
-
+      <div class="btns-container">
         <button class="btn btn-new">
           <i class="fas fa-plus-circle"></i>New game
         </button>
+        <input
+          type="text"
+          name="Winning Score"
+          placeholder="Enter winning score!"
+          class="form-control"
+          id="form-control"
+        />
+      </div>
+
+      <div class="section-center game-center">
+        <!-- new game cell -->
 
         <!-- player-0 cell -->
         <div class="player-0-cell">
@@ -88,22 +98,6 @@
                 <h4 class="current-score-label">current</h4>
                 <h3 class="player-current-score" id="player-current-score-0">
                   7
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- player-1 cell -->
-        <div class="player-1-cell">
-          <div class="player-block player-block-1">
-            <h3 class="player-name" id="player-name-1">player 2</h3>
-            <div class="grid-set">
-              <h1 class="player-score" id="player-score-1">18</h1>
-              <div class="current-score-box">
-                <h4 class="current-score-label">current</h4>
-                <h3 class="player-current-score" id="player-current-score-1">
-                  0
                 </h3>
               </div>
             </div>
@@ -127,15 +121,23 @@
           </div>
         </div>
 
-        <!-- winning-score cell -->
+        <!-- player-1 cell -->
+        <div class="player-1-cell">
+          <div class="player-block player-block-1">
+            <h3 class="player-name" id="player-name-1">player 2</h3>
+            <div class="grid-set">
+              <h1 class="player-score" id="player-score-1">18</h1>
+              <div class="current-score-box">
+                <h4 class="current-score-label">current</h4>
+                <h3 class="player-current-score" id="player-current-score-1">
+                  0
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <input
-          type="text"
-          name="Winning Score"
-          placeholder="Set Winning Score!"
-          class="form-control"
-          id="form-control"
-        />
+        <!-- winning-score cell -->
       </div>
     </section>
     <!-- end of game section -->
